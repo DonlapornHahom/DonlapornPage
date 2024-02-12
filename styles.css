@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    flex-shrink: 0;
+    justify-content: center;
+    display: flex;
+}
+.bar{
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(180deg, #f2f2f2 0%, #ccc 100%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.bar ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: large;
+}
+
+.bar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.bar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.bar ul li a:hover {
+    background-color: #ddd;
+}
+
+.main {
+    background-color: #f4f4f4;
+    margin: 20px auto; /* เพิ่ม auto เพื่อให้คงที่ตามแนวนอน */
+    padding: 20px;
+    width: 800px; /* ขนาดคงที่สูงสุด */
+    width: 100%; /* ให้รับความกว้างเต็มของพื้นที่ที่กำหนดไว้ */
+    box-sizing: border-box; /* ไม่ให้ padding และ border ส่วนใดเพิ่มขึ้นเข้าไปทำให้เกินขนาด */
+    flex: 1; /* ให้ส่วน .main ยืดหดตามขนาดของหน้าจอ */
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #848784;
+    color: white;
+}
+.secondBar {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    height: fit-content;
+}
+footer {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+video {
+    width: 100%; 
+    height: auto; 
+    border: none;
+}
+.responsive-video {
+    width: 100%; 
+    max-width: 550px; 
+    height: auto; 
+    max-height: 350px; 
+    border: none;
+}
+
+/* mobile Device*/
+@media screen and (max-width: 600px) {
+    .bar {
+        display: block;
+    }
+
+    .main h2 {
+        text-align: center;
+    }
+
+    .main {
+        margin-bottom: 0.9em ;
+    }
+    
+    video {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+}
+
+/* Tablet Device */
+@media screen and (min-width: 601px) and (max-width: 767px) {
+    .bar {
+        width: auto;
+        display: flex;
+        justify-content: space-around;
+        gap: 20px; 
+        flex-wrap: wrap;
+    }
+
+    .menuBar {
+        flex:1; 
+    }
+
+    .main {
+        flex: 2; 
+    }
+
+    .secondBar {
+        flex-basis: 100%; 
+    }
+
+    video {
+        width: 50%;
+        border: none;
+    }
+    img {
+        width: 100%;
+        border: none;
+    }
+}
+
+/* Web desktop */
+@media screen and (min-width: 768px) {
+    .bar {
+        width: auto;
+        display: flex;
+        justify-content: space-around;
+        gap: 20px; 
+    }
+
+    .menuBar {
+        flex: 1; 
+    }
+
+    .main {
+        flex: 2; 
+    }
+
+    .secondBar {
+        flex: 1; 
+    }
+    
+    video {
+        width: 25%;
+        border: none;
+    }
+  
+}
